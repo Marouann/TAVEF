@@ -1,0 +1,46 @@
+{# src/MC/PlatformBundle/Resources/views/Suggest/index.html.twig #}
+
+{% extends "MCPlatformBundle::layout.html.twig" %}
+
+{% block title %}
+  Accueil - {{ parent() }}
+{% endblock %}
+
+{% block body %}
+  <div id="header" class="jumbotron">
+      <h1>Bienvenue dans votre boite à idées !</h1>
+      <p>
+        Vous ne serez plus jamais à court de trucs à voir, faire ou entendre !
+      </p>
+    </div>
+    
+  <div id="last_suggests" class="col-md-12">
+    <h2>Vos dernières suggestions</h2>
+    <div class="suggestions">
+    {% if listSuggests |length < 6 %}
+      {% for suggest in listSuggests %}
+      <div id="suggestion" class="row">
+          <div class="col-md-8">
+            <h3><a href="{{ path('mc_platform_view', {'id': suggest.id}) }}"> {{ suggest.title }}</a><i> - de {{ suggest.author.username }}, le {{ suggest.date|date('d/m/Y') }} </i></h3>  
+          </div>
+          <div id="categoryname" class="col-md-4">
+            <h3>{{ suggest.category.name }}</h3>
+          </div>
+        </div>
+      {% endfor %}
+    {% else %}
+      {% for i in 0..4 %}
+      <div id="suggestion" class="row">
+          <div class="col-md-8">
+            <h3><a href="{{ path('mc_platform_view', {'id': listSuggests[i].id}) }}"> {{ listSuggests[i].title }}</a><i> - de {{ listSuggests[i].author.username }}, le {{ listSuggests[i].date|date('d/m/Y')}} </i></h3>  
+          </div>
+          <div id="categoryname" class="col-md-4">
+            <h3>{{ listSuggests[i].category.name }}</h3>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+
+{% endblock %}

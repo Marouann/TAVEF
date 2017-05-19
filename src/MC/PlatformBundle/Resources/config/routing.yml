@@ -1,0 +1,15 @@
+mc_platform_homepage:
+    path:     /
+    defaults: { _controller: MCPlatformBundle:Suggest:index }
+
+mc_platform_view:
+    path:    /suggest/{id}
+    defaults:
+        _controller: MCPlatformBundle:Suggest:view
+    requirements:
+        id: \d+
+
+mc_platform_add:
+    path:    /add
+    defaults:
+        _controller: MCPlatformBundle:Suggest:add

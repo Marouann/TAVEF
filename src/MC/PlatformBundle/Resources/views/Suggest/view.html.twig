@@ -1,0 +1,18 @@
+{# src/OC/PlatformBundle/Resources/view/Advert/view.html.twig #}
+
+{% extends "MCPlatformBundle::layout.html.twig" %}
+
+{% block title %}
+  Recommendation - {{ parent() }}
+{% endblock %}
+
+{% block body %}
+  <div id="annonce">
+    <h2>{{ suggest.title }} - <i>{{ suggest.category.name }}</i></h2>
+    <i>Par {{ suggest.author.username }}, le {{ suggest.date|date('d/m/Y') }}</i>
+    <div class="well">
+      {{ suggest.content }}
+    </div>
+  </div>
+
+{% endblock %}

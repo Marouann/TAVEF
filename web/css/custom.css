@@ -1,0 +1,71 @@
+.jumbotron h1{
+    color : black;
+    font-family: "Roboto";
+    font-size : 35px;
+}
+
+.jumbotron{
+    background-color: #FBB632;
+}
+
+#content {
+    margin-top:70px;
+}
+
+#navbar ul li {
+    margin-left: 50px;
+}
+
+#navbar ul li a {
+    color : white;
+    font-family: "Roboto";
+    font-size: 18px;
+}
+.navbar-default .navbar-brand {
+    color: black;
+    font-family: "Roboto";
+    font-size : 20px;
+    font-weight: bold;
+}
+
+.nav a{
+    color : white;
+    font-family: "Roboto";
+    font-size: 18px;
+}
+
+.navbar{
+    background-color: #FB8432;
+}
+
+#last_suggests h2{
+    text-align: center;
+}
+
+#navbar ul li a:hover{
+    background-color: #DC742C;
+}
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus, .dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus{
+    background-color: #DC742C;
+}
+.dropdown-menu {
+    background-color: #FB934C;
+}
+
+#suggestion {
+    background-color:white;
+    margin-bottom:10px;
+    border-radius:5px;
+}
+
+#suggestion a{
+    font-size:22px;
+}
+
+#suggestion i{
+    font-size:16px;
+}
+
+#categoryname{
+    text-align: right;
+}
